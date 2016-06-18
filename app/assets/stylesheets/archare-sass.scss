@@ -1,0 +1,554 @@
+@import "bootstrap";
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet{
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px){
+    @content;
+  }
+}
+
+@mixin desktop{
+  @media (min-width: $desktop-width){
+    @content;
+  }
+}
+
+
+@mixin mobile{
+  @media (max-width: $tablet-width - 1px){
+    @content;
+  }
+}
+
+@mixin ah-animation($attribute, $duration){
+
+  @if not $attribute{
+    $attribute: all;
+  }
+
+  // transition animation
+  -webkit-transition: $attribute $duration ease;   
+     -moz-transition: $attribute $duration ease;
+       -o-transition: $attribute $duration ease;
+          transition: $attribute $duration ease;
+
+}
+
+
+
+
+
+$mb-sidebar-width: 60px;
+$sidebar-width: 100px;
+
+$sidebar-bg-color: lighten(#000, 20%); // gray dark of bootstrap;
+
+
+
+
+$cube-blue: #6666ff;
+$cube-red: #ff3333;
+$cube-green: #66ff66;
+
+$cube-width: 50px;
+
+
+.ah-wrapper.sb-collapsed {
+  // wrapper is in sidebar-collapsed mode
+
+  padding-left: 0px;
+  margin-left: 0px;
+
+  .ah-fixed-top-nav{
+
+    margin-left: 0px;
+    padding: 20px;
+    background-color: transparent;
+  }
+
+
+  .ah-sidebar-wrapper {
+    width: 0px;
+  }
+
+  .ah-page-content {
+
+    position: relative;
+    margin-right: -250px;
+
+    @include mobile{
+      
+      position: relative;
+      margin-right: 0;
+    }
+  }
+}
+
+
+// normal, non-collapsed mode
+.ah-wrapper {
+
+
+  margin-left: $sidebar-width;
+
+  @include mobile{
+    margin-left: $mb-sidebar-width;
+  }
+  
+  @include ah-animation(all, 0.5s);
+}
+
+.ah-fixed-top-nav{
+
+  margin-left: $sidebar-width;
+  padding: 20px;
+  // background: white;
+  height: 60px;
+
+  @include ah-animation(all, 0.5s);
+
+  @include mobile{
+
+    margin-left: $mb-sidebar-width;
+  }
+}
+
+
+.ah-sidebar-wrapper {
+
+  position: fixed;
+
+
+  width: $sidebar-width;
+  left: $sidebar-width;
+  margin-left: -$sidebar-width;
+
+  @include mobile{
+
+    width: $mb-sidebar-width;
+    left: $mb-sidebar-width;
+    margin-left: -$mb-sidebar-width;
+  }
+
+  height: 100%;
+
+  overflow-y: auto;
+  background: $sidebar-bg-color;
+
+  @include ah-animation(all, 0.5s);
+}
+
+.ah-page-content {
+
+
+
+
+
+  
+  width: 100%;
+  position: absolute;
+  // padding: 10px;
+
+  @include mobile {
+    padding: 0px;
+    position: absolute;
+  }
+}
+
+
+// sidebar
+.ah-sidebar {
+
+  position: absolute;
+
+  top: 0;
+
+  width: $sidebar-width;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  text-align: center; 
+  @include ah-animation(all, 0.5s);
+
+
+  @include mobile{
+    width: $mb-sidebar-width;
+  }
+}
+
+
+
+// ah sidebar brand
+.ah-sidebar-brand {
+
+  height: 65px;
+
+
+  font-size: 20px;
+  font-weight: 600; //semi bold
+  font-family: 'Open Sans', sans-serif;
+  line-height: 60px;
+
+
+  @include mobile{
+    font-size: 15px;
+  }
+}
+
+
+.ah-sidebar li {
+
+  font-family: 'Varela Round', sans-serif;
+}
+
+.ah-sidebar li{
+  left-padding: 0;
+}
+
+.ah-sidebar > .ah-sidebar-brand a {
+  text-decoration: none;
+  color: #b3b3b3;
+}
+
+.ah-sidebar > .ah-sidebar-brand a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: none;
+}
+
+
+
+
+
+// cube styles
+
+
+$cube-font-size: 15px;
+$cube-border-width: 2px;
+
+$mobile-cube-ratio: 0.8;
+
+// default cube style
+.ah-nav-cube  {
+
+  display: inline-block;
+
+  // text and fonts
+  text-decoration: none;
+  color: white;
+  font-size: $cube-font-size;
+
+  text-align: center;
+
+
+  // round rect border
+  border-radius: 5px;
+  border-style: solid;
+  border-width: $cube-border-width;
+  border-color: white;
+
+
+  z-index: 10;
+
+
+  // margin and padding
+  margin: 0 auto;
+  padding-top: ($cube-width - $cube-font-size)/2 - 2 * $cube-border-width;  // a little bit less padding top
+
+  box-sizing: border-box;
+
+
+  width: $cube-width;
+  height: $cube-width;
+
+  @include mobile{
+
+    width: $mobile-cube-ratio * $cube-width;
+    height: $mobile-cube-ratio * $cube-width;
+    padding-top: $mobile-cube-ratio * ($cube-width - $cube-font-size)/2 - 2 * $cube-border-width;  // a little bit less padding top
+    font-size: $cube-font-size * $mobile-cube-ratio;
+  }
+
+  @include ah-animation(background-color, 1s);
+}
+
+
+
+.ah-nav-cube{
+
+
+
+  // different states for cube
+  &:hover {
+
+    text-decoration: none;
+
+
+    // rotate
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transition-duration: 1s;
+    transition-property: transform;
+  }
+
+
+  &:active, &:focus {
+
+    text-decoration: none;
+  }
+
+
+  // styles ah blue cube
+  &.ah-blue-cube{
+
+    color: white;
+    border-color: $cube-blue;
+
+    &:hover{
+
+      color: white;
+      background-color: $cube-blue;
+    }
+  }
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ah-sb-sublist{
+
+  text-align: center;
+  // display: none;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+
+  @include ah-animation(opacity, 1s);
+
+
+  &:hover{
+
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+  }
+}
+
+.ah-sb-sublist-btn{
+
+  &:hover, 
+  &:active, 
+  &:focus{
+    & ~ .ah-sb-sublist{
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      height: auto;
+    }
+  }
+}
+
+
+
+
+
+
+$line-width: 2px;
+
+
+// archare veritical line for connecting the cubes
+.ah-ver-line {
+
+  display: block;
+  background-color: $cube-blue;
+
+  width: 2px;
+  height: 20px;
+  margin: 0 auto;
+
+
+  &.ah-blue-line{
+
+    background-color: $cube-blue;
+  }
+}
+
+
+// archare horizontal line for connecting the cubes
+.ah-hor-line {
+
+  display: inline-block;
+
+  background-color: $cube-blue;
+
+  width: $cube-width/2;
+
+  margin-top: ($cube-width - $line-width)/2;
+
+  height: $line-width;
+  margin-bottom: $cube-width - ($cube-width - $line-width)/2;
+
+
+
+  &.ah-blue-line{
+
+    background-color: $cube-blue;
+  }
+}
+
+
+.ah-nav-cube:active,
+.ah-nav-cube:focus{
+  & + .tooltip{
+    opacity: 0;
+  }
+}
+
+
+.ah-nav-cube.ah-blue-cube + .tooltip {
+
+  z-index: 100;
+
+  & > .tooltip-inner { 
+    background-color: $cube-blue; 
+    opacity: 0.8;
+  }
+  & > .tooltip-arrow { 
+    border-top-color: $cube-blue; 
+    opacity: 0.8;
+  }
+}
+
+
+
+
+// old ideas for horizontal cube list and vertical cubelist
+/*
+
+
+// horizontal cubelist
+.ah-hor-cubelist {
+
+  position: fixed;
+  display: inline-block;
+
+
+  font-size: 0;  //remove space between inline blocks
+
+  height: 50px;
+
+
+  opacity: 0;
+  visibility: hidden;
+  
+  @include ah-animation(all, 0.3);
+
+
+  .ah-nav-cube{
+    // position: fixed;
+    margin: 0 auto;
+    // display: inline-block;
+    font-size: 15px; 
+    color: $cube-blue;
+    z-index: 100;
+  }
+
+
+  > *{
+
+    vertical-align: middle;
+  }
+ 
+}
+
+
+.ah-hor-cubelist:hover,
+.ah-cubelist-btn:hover + .ah-hor-cubelist,
+.ah-cubelist-btn:active + .ah-hor-cubelist{
+
+  visibility: visible;
+  opacity: 1;
+}
+
+.ah-hor-cubelist .ah-nav-cube:hover{
+  color: #fff;
+}
+
+
+
+
+
+// vertical cubelist 
+.ah-ver-cubelist {
+
+  position: fixed;
+  display: block;
+
+
+
+  font-size: 0;  //remove space between inline blocks
+
+  width: 50px;
+
+  text-align: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  
+  @include ah-animation(all, 0.3s);
+
+  .ah-nav-cube{
+    // position: fixed;
+    margin: 0 auto;
+    display: block;
+    font-size: 15px; 
+    color: $cube-blue;
+    z-index: 100;
+  }
+
+}
+
+
+
+.ah-ver-cubelist:hover,
+.ah-cubelist-btn:hover + .ah-ver-cubelist,
+.ah-cubelist-btn:active + .ah-ver-cubelist{
+
+  visibility: visible;
+  opacity: 1;
+}
+
+.ah-ver-cubelist .ah-nav-cube:hover{
+  color: #fff;
+}
+
+
+
+
+*/
+
+
+
+
+
+
