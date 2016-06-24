@@ -2,7 +2,7 @@
 # ArchareUI
 
 Archare UI is a ui framework currently including a collapsable navigation sidebar and menu toggles for it. 
-The newest version is 0.2.0.
+The newest version is 0.2.1.
 [Archare](http://archare.elasticbeanstalk.com) is my personal site with some posts and simple data visualizations.
 
 

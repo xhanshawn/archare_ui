@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"AR",
+				"ArchareUI"
+			],
+			[
 				"dev",
 				"device_width"
 			],
@@ -510,15 +514,59 @@
 			[
 				"dou",
 				"DoublyLinkedList"
-			],
-			[
-				"prun",
-				"PruneList"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "archare_ui.gemspec",
+			"settings":
+			{
+				"buffer_size": 1348,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1455,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/archare_ui/version.rb",
+			"settings":
+			{
+				"buffer_size": 41,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/archare_ui.rb",
+			"settings":
+			{
+				"buffer_size": 133,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/ah-ui-js.js",
+			"settings":
+			{
+				"buffer_size": 1069,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/archare-sass.scss",
+			"settings":
+			{
+				"buffer_size": 7131,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -657,10 +705,26 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/hanxu/Documents/workspace/ruby/archare_ui"
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui",
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui/app",
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui/app/assets",
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui/app/assets/javascripts",
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui/app/assets/stylesheets",
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui/lib",
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui/lib/archare_ui"
 	],
 	"file_history":
 	[
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui/app/assets/javascripts/ah-ui-js.js",
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui/app/assets/stylesheets/archare_ui.css.scss",
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui/app/assets/javascripts/archare_ui.js",
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui/lib/archare_ui/version.rb",
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui/app/assets/javascripts/test.js",
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui/app/assets/stylesheets/archare-sass.scss",
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui/app/assets/stylesheets/archare-sass.scss.haml",
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui/lib/archare_ui/engine.rb",
+		"/Users/hanxu/Documents/workspace/ruby/archare_ui/lib/archare_ui.rb",
+		"/Users/hanxu/Documents/workspace/ruby/personalsite/Gemfile",
 		"/Users/hanxu/Documents/workspace/ruby/PersonalSite/Gemfile",
 		"/Users/hanxu/Documents/workspace/ruby/PersonalSite/app/assets/stylesheets/application.css.scss",
 		"/Users/hanxu/Documents/workspace/ruby/PersonalSite/app/assets/stylesheets/archare-sass.scss",
@@ -778,21 +842,11 @@
 		"/Users/hanxu/Desktop/hw5/c_tb.v.bak",
 		"/Users/hanxu/workspace/mianjing/aristanw/Arista/removeValues_q.c",
 		"/Users/hanxu/Documents/workspace/ruby/PersonalSite/app/assets/stylesheets/posts.css",
-		"/Users/hanxu/Documents/workspace/ruby/PersonalSite/config/environments/production.rb",
-		"/Users/hanxu/Documents/workspace/ruby/PersonalSite/app/assets/stylesheets/posts.scss",
-		"/Users/hanxu/Documents/workspace/ruby/personalsite/app/assets/stylesheets/application.css",
-		"/Users/hanxu/Documents/workspace/ruby/PersonalSite/app/assets/stylesheets/posts.scss.erb",
-		"/Users/hanxu/Documents/workspace/ruby/personalsite/app/assets/stylesheets/application.scss",
-		"/Users/hanxu/Downloads/freebie-footer-templates/css/footer-distributed.css",
-		"/Users/hanxu/Documents/workspace/ruby/PersonalSite/app/views/users/_update_form.html.erb",
-		"/Users/hanxu/Documents/workspace/ruby/personalsite/app/views/users/_update_form",
-		"/Users/hanxu/Documents/workspace/ruby/PersonalSite/app/controllers/page_contents_controller.rb",
-		"/Users/hanxu/Documents/workspace/ruby/PersonalSite/app/models/user.rb",
-		"/Users/hanxu/Documents/workspace/ruby/PersonalSite/app/views/users/_form.html.erb"
+		"/Users/hanxu/Documents/workspace/ruby/PersonalSite/config/environments/production.rb"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -807,6 +861,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"boo",
 			"padding",
 			"xh-edu",
 			"if",
@@ -933,8 +988,7 @@
 			"type",
 			"is_deve",
 			"type",
-			"is_dev",
-			"type"
+			"is_dev"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -952,8 +1006,183 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "archare_ui.gemspec",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1348,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								844,
+								844
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								569,
+								569
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/archare_ui/version.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 41,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								35,
+								35
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "lib/archare_ui.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 133,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10,
+								10
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/assets/javascripts/ah-ui-js.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1069,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								233,
+								233
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 193.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/assets/stylesheets/archare-sass.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
 			]
 		}
 	],
