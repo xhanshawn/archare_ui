@@ -1,9 +1,10 @@
 <<<<<<< HEAD
-# ArchareUi
+# ArchareUI
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/archare_ui`. To experiment with that code, run `bin/console` for an interactive prompt.
+Archare UI is a ui framework currently including a collapsable navigation sidebar and menu toggles for it. 
+The newest version is 0.2.0.
+[Archare](http://archare.elasticbeanstalk.com) is my personal site with some posts and simple data visualizations.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -23,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Archare UI uses some basic funcitonalities of Bootstrap. So please include it before using it. 
 
 ## Development
 

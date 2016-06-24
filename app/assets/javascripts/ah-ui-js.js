@@ -6,7 +6,7 @@ $('.ah-menu-toggle').on('click', function(e){
 
 
 // tooltip for ah nav cube
-$(document).ready(function(){
+function add_nav_cube_tooltip(){
 
   console.log("Archare-ui-js");
 
@@ -17,7 +17,8 @@ $(document).ready(function(){
 
 
   $('[data-toggle="tooltip"]').tooltip({'placement': 'top'});
-});
+}
+
 
 
 // scroll animation for navigating with id

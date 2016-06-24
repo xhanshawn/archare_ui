@@ -1,1 +1,1 @@
-//= require_tree .
+//= require ah-ui-js
